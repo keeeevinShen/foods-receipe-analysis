@@ -26,7 +26,6 @@ This analysis is based on the Recipes and Rating dataset, which contains a large
 ### Data Cleaning
 first, since the recipe dataset and review dataset are given as two different dataset, but since they have the same recipe id, we can first merge them together to connect the rating with recipe. And since there are more than one review for a certain recipe, we will take the mean rating for a certain recipe, and add a new column to the recipe dataframe called "avg_rating".
 
-after this, we will replace the rating with NaN value with 0. 
 
 The result dataframe looks like this:
 
@@ -110,7 +109,7 @@ the chart looks like the following:
 from this chart we can see as the rating increase, the number of steps is tend to decreasae. As the the rating increase, the minutes is also tend to decrease. but the reason why rating 5 have a abnormal large minutes is because there are many outliers, some recipe have rating of 5 but have extremly larger minutes (as shown in the minutes vs average rating graph)
 
 ### Imputation
-I replaced all the missing value (NaN) in rating into 0. 
+I didn't confuct imputation because as there are no missing value on the avg_rating, minutes and n_steps
 
 
 ## Framing a Prediction Problem
